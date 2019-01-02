@@ -1,3 +1,46 @@
-<p>
-  pokedex works!
-</p>
+<div class="card_cointainer">
+  <mat-card class="card_pokemon">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ pokemonData.name | titlecase }}</mat-card-title>
+      <mat-card-subtitle *ngFor="let type of pokemonType">{{
+        type.type.name | titlecase
+      }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      class="card_pokemon_image"
+      src="{{ pokeImage }}"
+      alt="{{ pokemonData.name }}"
+    />
+    <mat-card-actions>
+      <button
+        mat-button
+        class=""
+        [ngClass]="{ active: imgType == 'normal' }"
+        (click)="imgViewType('normal')"
+      >
+        Normal
+      </button>
+      <button
+        mat-button
+        class=""
+        [ngClass]="{ active: imgType == 'animated' }"
+        (click)="imgViewType('animated')"
+      >
+        Animated
+      </button>
+      <button
+        mat-button
+        class=""
+        [ngClass]="{ active: shiny }"
+        (click)="shinyToggle(imgType)"
+      >
+        Shiny
+      </button>
+    </mat-card-actions>
+    <mat-card-content>
+      <p>{{ description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

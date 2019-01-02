@@ -1,0 +1,17 @@
+.card_cointainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  height: -webkit-fill-available;
+  background: pink;
+  .card_pokemon {
+    display: block;
+    width: 65%;
+    margin-top: 30px;
+    height: fit-content;
+  }
+  .card_pokemon_image {
+    width: 30%;
+  }
+}
