@@ -1,0 +1,23 @@
+<cdk-virtual-scroll-viewport style="height: 800px;" itemSize="10">
+  <div class="container">
+    <mat-card
+      class="poke-cards"
+      *cdkVirtualFor="let pokemon of (pokemons | slice: 0:151); index as i"
+      [routerLink]="['/pokemon', pokemon.name, i]"
+    >
+      <img
+        class="poke-preview"
+        mat-card-image
+        src="https://img.pokemondb.net/sprites/sun-moon/icon/{{
+          pokemon.name
+        }}.png"
+        alt=""
+      />
+      <mat-card-header class="poke-cards-header">
+        <mat-card-title>
+          <p>{{ pokemon.name | titlecase }}</p></mat-card-title
+        >
+      </mat-card-header>
+    </mat-card>
+  </div>
+</cdk-virtual-scroll-viewport>

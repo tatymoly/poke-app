@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  .poke-cards {
+    display: block;
+    width: 27%;
+    margin: 10px;
+    text-align: center;
+    mat-card-header.poke-cards-header {
+      display: block;
+      a {
+        text-decoration: none;
+      }
+    }
+    img.poke-preview {
+      width: 75px;
+      margin-top: 25px;
+    }
+  }
+}
