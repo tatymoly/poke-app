@@ -18,7 +18,7 @@ export class PokedexComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.itemsId = this.route.snapshot.paramMap.get('id');
+    this.itemsId = this.route.snapshot.paramMap.get('name');
     console.log(this.itemsId);
     this.getPokemonsDescription(this.itemsId);
   }

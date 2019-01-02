@@ -38,7 +38,7 @@ export class PokemonsService {
   }
 
   getPokemonDescription(n) {
-    return this.http.get<any>(this.url + 'pokemon-species/' + n + '/').pipe(
+    return this.http.get<any>(this.url + 'pokemon/' + n + '/').pipe(
       map(res => {
         return res;
       })

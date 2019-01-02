@@ -4,7 +4,7 @@ import { PokedexComponent } from './pokedex.component';
 
 const routes: Routes = [
   {
-    path: ':name/:id',
+    path: ':name',
     component: PokedexComponent,
   },
 ];

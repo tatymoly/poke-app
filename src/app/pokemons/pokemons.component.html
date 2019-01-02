@@ -2,8 +2,8 @@
   <div class="container">
     <mat-card
       class="poke-cards"
-      *cdkVirtualFor="let pokemon of (pokemons | slice: 0:151); index as i"
-      [routerLink]="['/pokemon', pokemon.name, i]"
+      *cdkVirtualFor="let pokemon of (pokemons | slice: 0:151)"
+      [routerLink]="['/pokemon', pokemon.name]"
     >
       <img
         class="poke-preview"
